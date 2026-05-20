@@ -1,0 +1,27 @@
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 24px;
+}
+
+.tag-filter-btn {
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  font-size: 13px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.tag-filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.tag-filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
