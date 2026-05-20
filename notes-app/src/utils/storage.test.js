@@ -1,7 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { getNotes, saveNote, deleteNote, getNote } from './storage.js'
-
-const STORAGE_KEY = 'notes-app-data'
+import { getNotes, saveNote, deleteNote, getNote, STORAGE_KEY } from './storage.js'
 
 beforeEach(() => {
   localStorage.clear()

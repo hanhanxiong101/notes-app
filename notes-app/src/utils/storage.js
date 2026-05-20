@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'notes-app-data'
+export const STORAGE_KEY = 'notes-app-data'
 
 export function getNotes() {
   try {
@@ -13,24 +13,25 @@ export function saveNote(note) {
   const notes = getNotes()
   const now = new Date().toISOString().split('T')[0]
 
-  if (note.id) {
+  if (note.id != null) {
     const index = notes.findIndex(n => n.id === note.id)
     if (index !== -1) {
       notes[index] = { ...notes[index], ...note, updatedAt: now }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(notes))
+      return notes[index]
     }
-  } else {
-    note = {
-      ...note,
-      id: String(Date.now()),
-      createdAt: now,
-      updatedAt: now,
-      images: note.images || [],
-    }
-    notes.unshift(note)
   }
 
+  const newNote = {
+    ...note,
+    id: note.id || String(Date.now()),
+    createdAt: now,
+    updatedAt: now,
+    images: note.images || [],
+  }
+  notes.unshift(newNote)
   localStorage.setItem(STORAGE_KEY, JSON.stringify(notes))
-  return note
+  return newNote
 }
 
 export function deleteNote(id) {
