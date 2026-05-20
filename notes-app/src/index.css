@@ -1,27 +1,46 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --bg-warm: #f5f0e8;
+  --bg-card: #fffef9;
+  --bg-header: #ede3d2;
+  --text-primary: #4a3728;
+  --text-secondary: #8b7355;
+  --text-muted: #b8a58e;
+  --accent: #8b7355;
+  --accent-light: #c9a87c;
+  --border: #d4c5b2;
+  --shadow: 0 2px 8px rgba(139, 115, 85, 0.12);
+  --radius: 8px;
+  --font-serif: 'Georgia', 'Noto Serif SC', serif;
+  --font-sans: 'Segoe UI', 'PingFang SC', sans-serif;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: var(--font-sans);
+  background-color: var(--bg-warm);
+  color: var(--text-primary);
+  line-height: 1.6;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
 }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+a { text-decoration: none; color: inherit; }
