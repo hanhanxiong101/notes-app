@@ -1,0 +1,136 @@
+.note-editor {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-save {
+  padding: 8px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-save:hover { background: #7a6348; }
+
+.editor-title {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  margin-bottom: 12px;
+}
+
+.editor-title:focus { border-color: var(--accent); }
+
+.editor-content {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  resize: vertical;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.editor-content:focus { border-color: var(--accent); }
+
+.editor-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.editor-img-wrap {
+  position: relative;
+}
+
+.editor-img-preview {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.editor-img-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.editor-img-add {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+}
+
+.editor-img-add:hover { border-color: var(--accent); color: var(--accent); }
+
+.editor-error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.editor-tags-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.editor-tags-input {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.editor-tags-input:focus { border-color: var(--accent); }
