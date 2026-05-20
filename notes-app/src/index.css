@@ -43,4 +43,11 @@ input, textarea {
   outline: none;
 }
 
-a { text-decoration: none; color: inherit; }
+input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a { color: var(--accent); }
+
+a:hover { text-decoration: underline; }
